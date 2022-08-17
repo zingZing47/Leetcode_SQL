@@ -1,0 +1,17 @@
+Select player_id,
+       first_login
+  FROM (
+    SELECT player_id,
+           event_date first_login,
+           dense_rank()
+           over (PARTITION BY player_id
+                     ORDER BY event_date) poz
+      FROM Activity
+  )a
+  WHERE poz = 1
+  
+  There are several types of rank in Window Function:
+  1. rank  -> using to rank the values
+  2. dense_rank -> using to rank the groups
+  3. row_number -> tracking the row number, similar to the id of the rows
+  4. NTILE -> using to quartile the table
