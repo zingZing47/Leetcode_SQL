@@ -1,0 +1,12 @@
+SELECT u.name
+     , IFNULL(sum(distance), 0) travelled_distance
+  FROM Users u
+  LEFT
+  JOIN Rides r on (r.user_id = u.id)
+ GROUP BY u.id # Don't group by name!
+ ORDER BY 2 DESC, 1;
+ 
+ Difference between IFNULL and COALESCE: 
+ IFNULL checks a single argument. COALESCE works with N arguments. 
+ COALESCE is useful when you have an unknown number of values that you want to check. 
+ IFNULL is useful when you select columns and know that it can be null but you want to represent it with a different value
