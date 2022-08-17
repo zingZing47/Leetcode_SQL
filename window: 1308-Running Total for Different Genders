@@ -1,0 +1,7 @@
+SELECT gender
+     , day
+     , SUM(score_points) OVER (PARTITION BY gender ORDER BY day) total
+  FROM Scores
+  
+  PARTITION BY -> define the group
+  ORDER BY -> define how to number the rows
