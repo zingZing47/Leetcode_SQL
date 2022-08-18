@@ -20,4 +20,4 @@ SELECT product_name
  First, use max() to select all orders for the most recent day for each product, then join another table for more information 
  and pick out the duplicate records.
  
- It can also sovled by window(), similar to 1077. Project Employees III, just rank the order_date in descending order and filter rows.
+ It can also be solved by window(), similar to 1077. Project Employees III, just rank the order_date in descending order and filter rows.
