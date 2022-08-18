@@ -1,0 +1,23 @@
+Solution:
+WITH a AS(
+SELECT product_id
+     , max(order_date) order_date
+ FROM Orders o
+GROUP BY 1
+)
+SELECT product_name
+     , a.product_id
+     , order_id
+     , a.order_date
+  FROM a
+  JOIN Orders o on (a.product_id = o.product_id AND a.order_date = o.order_date)
+  JOIN Products p on (a.product_id = p.product_id)
+ ORDER BY 1,2,3
+ 
+
+ This problem requires selecting all records for the most recent order for each product, so there may be duplicates.
+ 
+ First, use max() to select all orders for the most recent day for each product, then join another table for more information 
+ and pick out the duplicate records.
+ 
+ It can also sovled by window(), similar to 1077. Project Employees III, just rank the order_date in descending order and filter rows.
