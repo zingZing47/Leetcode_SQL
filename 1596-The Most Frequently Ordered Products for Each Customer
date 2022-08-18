@@ -1,0 +1,15 @@
+WITH freq as(
+    SELECT customer_id
+         , product_id
+         , rank() over(partition by customer_id order by COUNT(product_id)DESC) RNK
+      FROM Orders
+     GROUP BY 1,2 # for the count() function
+)
+SELECT customer_id
+     , product_id
+     , product_name
+  FROM freq
+  LEFT
+  JOIN Products USING (product_id)
+ WHERE RNK = 1
+ ORDER BY 1,2,3
