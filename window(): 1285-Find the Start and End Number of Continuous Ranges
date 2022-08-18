@@ -1,0 +1,12 @@
+WITH a AS(
+SELECT log_id
+     , log_id - (row_number() over(order by log_id)) diff
+  FROM Logs
+)
+SELECT MIN(log_id) AS start_id
+     , MAX(log_id) AS end_id
+  FROM a
+ GROUP BY diff
+ ORDER BY start_id
+ 
+ Solution for all Continuous Ranges problem
