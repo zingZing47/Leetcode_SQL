@@ -1,0 +1,13 @@
+WITH a AS(
+    SELECT employee_id
+         , project_id
+         , rank() over(PARTITION BY project_id ORDER BY experience_years DESC) rnk
+      FROM Employee
+     RIGHT
+      JOIN Project using(employee_id)
+)
+
+SELECT project_id
+     , employee_id
+  FROM a
+ WHERE rnk = 1
