@@ -8,11 +8,13 @@
 | 1285 | window: `row_number()`  |Find the Start and End Number of Continuous Ranges|
 | 1308 | window: `sum()`  |Running Total for Different Genders|
 | 1407 | `IFNULL()`  |Top Travellers: Repeat names(don't group by)|
+| 1532 | window: `rank()`  |The Most Recent Three Orders|
 | 1549 |  `max()`  |The Most Recent Orders for Each Product: keep the duplicates|
 | 1596 | window: `rank()`  |The Most Frequently Ordered Products for Each Customer|
 | 1709 | window: `LEAD()`  |Biggest Window Between Visits|
 | 1949 | `Union` + `Join` |Strong Friendship|
 | 1951 | window: `rank()`  |All the Pairs With the Maximum Number of Common Followers|
+
 
 ## Aggregation Functions:
 sum()
