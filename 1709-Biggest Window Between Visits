@@ -1,0 +1,11 @@
+WITH a AS(
+    SELECT user_id
+         , visit_date
+         , DATEDIFF(LEAD(visit_date,1,'2021-1-1') OVER (PARTITION BY user_id ORDER BY visit_date), visit_date) diff
+      FROM UserVisits
+)
+SELECT user_id
+     , max(diff) biggest_window
+  FROM a
+ GROUP BY 1
+ ORDER BY 1
