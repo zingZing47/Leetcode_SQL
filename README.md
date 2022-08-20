@@ -11,9 +11,8 @@
 | 1549 |  `max()`  |The Most Recent Orders for Each Product: keep the duplicates|
 | 1596 | window: `rank()`  |The Most Frequently Ordered Products for Each Customer|
 | 1709 | window: `LEAD()`  |Biggest Window Between Visits|
+| 1949 | `Union` + `Join` |Strong Friendship|
 | 1951 | window: `rank()`  |All the Pairs With the Maximum Number of Common Followers|
-
-
 
 ## Aggregation Functions:
 sum()
