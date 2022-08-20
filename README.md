@@ -2,7 +2,7 @@
 
 | No.           | Relevant Functions |Description|
 | ------------- | -----------------| -------------|
-| 177 | window: `dense_rank()` or `ifnull()`+`limit()` |Nth Highest Salary|
+| 177 | window: `dense_rank()` or `ifnull()`+`limit()` |UDFUNCTION:Nth Highest Salary|
 | 511 | window: `dense_rank()`  |Game Play Analysis: find first_login date|
 | 1077 | window: `rank()`  |Project Employees III: find the most experiecned employees|
 | 1285 | window: `row_number()`  |Find the Start and End Number of Continuous Ranges|
