@@ -1,0 +1,33 @@
+# FUNCTION PROBLEM:
+
+## SOLUTION 1: WINDOW()
+CREATE FUNCTION getNthHighestSalary(N INT) RETURNS INT
+BEGIN
+  RETURN (
+      SELECT CASE
+             WHEN N <= MAX(rnk) THEN salary
+             ELSE null
+              END getNthHighestSalary
+        FROM (
+          SELECT salary
+               , DENSE_RANK() OVER(ORDER BY salary DESC) rnk
+            FROM Employee) a
+       WHERE rnk = N
+  );
+END
+
+
+## SOLUTION 2: IFNULL()+LIMIT
+CREATE FUNCTION getNthHighestSalary ( N INT ) 
+RETURNS INT BEGIN
+DECLARE m INT;
+SET m = N - 1;
+
+RETURN ( # Write your MySQL query statement below.
+
+SELECT ifnull((SELECT DISTINCT salary 
+                FROM Employee 
+               ORDER BY salary DESC 
+               LIMIT m, 1 ), NULL)
+);
+END
