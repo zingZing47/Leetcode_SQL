@@ -1,0 +1,14 @@
+WITH f as(
+    SELECT * FROM Friendship
+    UNION
+    SELECT user2_id, user1_id FROM Friendship
+)
+    SELECT t1.user1_id user1_id
+         , t2.user1_id user2_id
+         , COUNT(*)  common_friend
+      FROM f t1
+      JOIN f t2 on (t1.user2_id = t2.user2_id and t1.user1_id < t2.user1_id)
+     WHERE (t1.user1_id, t2.user1_id) in (select * from f)
+     GROUP BY 1,2
+     HAVING COUNT(*) > 2
+     
