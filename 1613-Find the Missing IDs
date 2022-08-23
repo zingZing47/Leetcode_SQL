@@ -1,0 +1,12 @@
+# Write your MySQL query statement below
+WITH RECURSIVE a AS(                      # recursion CTE
+    SELECT 1 AS n                         # Initial row: Define the length of the col
+     UNION ALL
+    SELECT n+1 FROM a WHERE n<100         # Recursive part
+)
+SELECT n ids
+  FROM a
+ WHERE n NOT IN (SELECT customer_id FROM Customers)
+   AND n <= (SELECT MAX(customer_id) FROM Customers)
+   
+   https://dev.mysql.com/doc/refman/8.0/en/with.html
