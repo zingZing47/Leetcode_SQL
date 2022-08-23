@@ -1,0 +1,26 @@
+# Solution 1 Union*3:
+
+SELECT employee_id
+  FROM Employees
+ WHERE manager_id = 1 AND employee_id != 1
+ UNION
+ SELECT e1.employee_id
+  FROM Employees e1
+  JOIN Employees e2 ON (e1.manager_id = e2.employee_id AND e2.manager_id = 1 AND e1.employee_id != 1)
+ UNION
+ SELECT e1.employee_id
+  FROM Employees e1
+  JOIN Employees e2 ON (e1.manager_id = e2.employee_id)
+  JOIN Employees e3 ON (e2.manager_id = e3.employee_id AND e3.manager_id = 1 AND e1.employee_id != 1)
+ORDER BY 1
+
+
+# Solution 2 With Recursive:
+
+WITH RECURSIVE tmp AS(
+    SELECT employee_id, 1 n FROM Employees WHERE employee_id !=1 and manager_id =1
+    UNION ALL
+    SELECT a.employee_id, n+1 FROM Employees a JOIN tmp b WHERE a.manager_id = b.employee_id AND n<3
+)
+SELECT employee_id FROM tmp
+ ORDER BY 1
