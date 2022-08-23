@@ -45,8 +45,8 @@ cbrt() cubed root
 ## Date:
 date_sub('2022-8-20', INTERVAL 3 day), to create new date
 
+date_format(day,"%Y-%m-%d"), to extract only date from column 'day'
 
-date_part('quarter', col_name), to select desired date type from exisiting columns ( 'year'/'month'/'day')
 age(col1, col2), calculate the gap year between two columns, col1(later) > col2
 
 datediff('2022-8-20','2022-8-19'), calculate the days diff between two columns, col1(later) > col2
