@@ -4,7 +4,7 @@
 | ------------- | -----------------| -------------|
 | 177 | window: `dense_rank()` or `ifnull()`+`limit()` |UDFUNCTION:Nth Highest Salary|
 | 511 | window: `dense_rank()`  |Game Play Analysis: find first_login date|
-| 1077 | Union / `with recursive` |Project Employees III: find the most experiecned employees|
+| 1077 | Union() or CTE: `with recursive` |Project Employees III: find the most experiecned employees|
 | 1270 | window: `rank()`  |All People Report to the Given Manager|
 | 1285 | window: `row_number()`  |Find the Start and End Number of Continuous Ranges|
 | 1308 | window: `sum()`  |Running Total for Different Genders|
