@@ -4,7 +4,8 @@
 | ------------- | -----------------| -------------|
 | 177 | window: `dense_rank()` or `ifnull()`+`limit()` |UDFUNCTION:Nth Highest Salary|
 | 511 | window: `dense_rank()`  |Game Play Analysis: find first_login date|
-| 1077 | window: `rank()`  |Project Employees III: find the most experiecned employees|
+| 1077 | Union / `with recursive` |Project Employees III: find the most experiecned employees|
+| 1270 | window: `rank()`  |All People Report to the Given Manager|
 | 1285 | window: `row_number()`  |Find the Start and End Number of Continuous Ranges|
 | 1308 | window: `sum()`  |Running Total for Different Genders|
 | 1407 | `IFNULL()`  |Top Travellers: Repeat names(don't group by)|
@@ -15,6 +16,7 @@
 | 1709 | window: `LEAD()`  |Biggest Window Between Visits|
 | 1949 | `Union` + `Join` |Strong Friendship|
 | 1951 | window: `rank()`  |All the Pairs With the Maximum Number of Common Followers|
+
 
 
 ## Aggregation Functions:
