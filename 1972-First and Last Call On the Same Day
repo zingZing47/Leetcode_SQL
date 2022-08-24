@@ -1,0 +1,24 @@
+# Write your MySQL query statement below
+WITH tmp1 as(
+  SELECT *
+    FROM Calls
+   UNION ALL
+  SELECT recipient_id, caller_id, call_time
+    FROM Calls
+),
+tmp2 as(
+    SELECT caller_id
+         , recipient_id
+         , dense_rank() over(PARTITION BY caller_id, DATE_FORMAT(call_time, '%Y-%m-%d') order by call_time) rnk1
+      FROM tmp1
+),
+tmp3 as(
+    SELECT caller_id
+         , recipient_id
+         , dense_rank() over(PARTITION BY caller_id, DATE_FORMAT(call_time, '%Y-%m-%d') ORDER BY call_time DESC) rnk2
+      FROM tmp1
+)
+SELECT DISTINCT tmp2.caller_id user_id
+  FROM tmp2
+  JOIN tmp3 ON (tmp2.caller_id = tmp3.caller_id AND tmp2.recipient_id = tmp3.recipient_id AND rnk1 = 1 AND rnk2 = 1)
+ ORDER BY 1
