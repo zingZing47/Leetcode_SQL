@@ -3,6 +3,7 @@
 | No.           | Relevant Functions |Description|
 | ------------- | -----------------| -------------|
 | 177 | window: `dense_rank()` or `ifnull()`+`limit()` |UDFUNCTION:Nth Highest Salary|
+| 185 | window: `dense_rank()` |Department Top Three Salaries|
 | 511 | window: `dense_rank()`  |Game Play Analysis: find first_login date|
 | 1077 | Union() or CTE: `with recursive` |Project Employees III: find the most experiecned employees|
 | 1270 | window: `rank()`  |All People Report to the Given Manager|
@@ -19,6 +20,7 @@
 | 1949 | `Union` + `Join` |Strong Friendship|
 | 1951 | window: `rank()`  |All the Pairs With the Maximum Number of Common Followers|
 | 1972 | window: `dense_rank()`+ `Union` |First and Last Call On the Same Day|
+
 
 
 ## Aggregation Functions:
