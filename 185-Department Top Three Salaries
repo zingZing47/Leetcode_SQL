@@ -1,0 +1,13 @@
+# Write your MySQL query statement below
+WITH tmp AS(
+    SELECT id
+     , departmentId
+     , DENSE_RANK() OVER(PARTITION BY departmentId ORDER BY salary DESC) rnk 
+  FROM Employee
+)
+SELECT d.name Department
+     , e.name Employee
+     , e.salary Salary
+  FROM Employee e
+  JOIN Department d ON (e.departmentId = d.id)
+  JOIN tmp ON (e.id = tmp.id AND e.departmentId = tmp.departmentId AND rnk < 4) 
