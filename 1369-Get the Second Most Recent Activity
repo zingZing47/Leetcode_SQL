@@ -1,0 +1,11 @@
+WITH cnt AS(
+    SELECT username
+         , startDate
+         , COUNT(activity) OVER (PARTITION BY username) act_num # !Use aggregation function in window can avoid another subquery
+         , RANK() OVER(PARTITION BY username ORDER BY startDate DESC) rnk
+      FROM UserActivity
+)
+SELECT u.*
+  FROM UserActivity u
+  JOIN cnt ON (u.username = cnt.username AND u.startDate = cnt.startDate)
+ WHERE act_num = 1 OR rnk = 2
