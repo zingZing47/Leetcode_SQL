@@ -17,9 +17,11 @@
 | 1596 | window: `rank()`  |The Most Frequently Ordered Products for Each Customer|
 |\1613 | CTE: `with recursive`  |Find the Missing IDs|
 | 1709 | window: `LEAD()`  |Biggest Window Between Visits|
+| \1767 | CTE: `with recursive`   |Find the Subtasks That Did Not Execute|
 | 1949 | `Union` + `Join` |Strong Friendship|
 | 1951 | window: `rank()`  |All the Pairs With the Maximum Number of Common Followers|
 | 1972 | window: `dense_rank()`+ `Union` |First and Last Call On the Same Day|
+
 
 
 
