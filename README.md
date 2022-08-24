@@ -2,20 +2,20 @@
 
 | No.           | Relevant Functions |Description|
 | ------------- | -----------------| -------------|
-| 177 | window: `dense_rank()` or `ifnull()`+`limit()` |UDFUNCTION:Nth Highest Salary|
+| \177 | window: `dense_rank()` or `ifnull()`+`limit()` |UDFUNCTION:Nth Highest Salary|
 | 185 | window: `dense_rank()` |Department Top Three Salaries|
 | 511 | window: `dense_rank()`  |Game Play Analysis: find first_login date|
-| 1077 | Union() or CTE: `with recursive` |Project Employees III: find the most experiecned employees|
+| \1077 | Union() or CTE: `with recursive` |Project Employees III: find the most experiecned employees|
 | 1270 | window: `rank()`  |All People Report to the Given Manager|
 | 1285 | window: `row_number()`  |Find the Start and End Number of Continuous Ranges|
 | 1308 | window: `sum()`  |Running Total for Different Genders|
 | 1369 | window: `count()+ rank()`  |Get the Second Most Recent Activity|
-| 1407 | `IFNULL()`  |Top Travellers: Repeat names(don't group by)|
+| \1407 | `IFNULL()`  |Top Travellers: Repeat names(don't group by)|
 | 1412 | `rank()`*2: decending / ascending  |Find the Quiet Students in All Exams|
 | 1532 | window: `rank()`  |The Most Recent Three Orders|
 | 1549 |  `max()`  |The Most Recent Orders for Each Product: keep the duplicates|
 | 1596 | window: `rank()`  |The Most Frequently Ordered Products for Each Customer|
-| 1613 | CTE: `with recursive`  |Find the Missing IDs|
+|\1613 | CTE: `with recursive`  |Find the Missing IDs|
 | 1709 | window: `LEAD()`  |Biggest Window Between Visits|
 | 1949 | `Union` + `Join` |Strong Friendship|
 | 1951 | window: `rank()`  |All the Pairs With the Maximum Number of Common Followers|
