@@ -18,7 +18,7 @@
 | 1709 | window: `LEAD()`  |Biggest Window Between Visits|
 | 1949 | `Union` + `Join` |Strong Friendship|
 | 1951 | window: `rank()`  |All the Pairs With the Maximum Number of Common Followers|
-
+| 1972 | window: `dense_rank()`+ `Union` |First and Last Call On the Same Day|
 
 
 ## Aggregation Functions:
