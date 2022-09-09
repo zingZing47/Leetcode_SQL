@@ -1,0 +1,11 @@
+# Write your MySQL query statement below
+WITH tmp as(
+    SELECT distinct salary salary
+         , Dense_rank() OVER(ORDER BY salary DESC) rnk
+      FROM Employee
+)
+SELECT IFNULL(
+    (SELECT salary
+      FROM tmp
+     WHERE rnk = 2)
+, Null) as SecondHighestSalary
