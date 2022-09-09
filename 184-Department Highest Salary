@@ -1,0 +1,15 @@
+# Write your MySQL query statement below
+WITH tmp AS(
+SELECT id
+     , salary
+     , departmentId
+     , rank() OVER(PARTITION BY departmentId ORDER BY salary DESC)  rnk 
+  FROM Employee
+)
+SELECT d.name Department
+     , e.name Employee
+     , tmp.salary Salary
+  FROM tmp
+  JOIN Department d ON (tmp.departmentId = d.id)
+  JOIN Employee e ON (e.id = tmp.id)
+ WHERE rnk = 1
