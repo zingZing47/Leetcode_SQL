@@ -2,6 +2,7 @@
 
 | No.           | Relevant Functions |Description|
 | ------------- | -----------------| -------------|
+| 176 | window: `dense_rank()`  `ifnull()`|Second Highest Salary|
 | \177 | window: `dense_rank()` or `ifnull()`+`limit()` |UDFUNCTION:Nth Highest Salary|
 | 185 | window: `dense_rank()` |Department Top Three Salaries|
 | 511 | window: `dense_rank()`  |Game Play Analysis: find first_login date|
