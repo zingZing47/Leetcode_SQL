@@ -5,7 +5,7 @@
 | 176 | window: `dense_rank()`  `ifnull()`|Second Highest Salary|
 | \177 | window: `dense_rank()` or `ifnull()`+`limit()` |UDFUNCTION:Nth Highest Salary|
 | 180 | NO LAG() LEAD()in mySQL |Consecutive Numbers|
-| 185 | window: `rank()` |Department Highest Salary|
+| 184 | window: `rank()` |Department Highest Salary|
 | 185 | window: `dense_rank()` |Department Top Three Salaries|
 | 511 | window: `dense_rank()`  |Game Play Analysis: find first_login date|
 | \1077 | Union() or CTE: `with recursive` |Project Employees III: find the most experiecned employees|
