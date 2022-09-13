@@ -8,6 +8,7 @@
 | 184 | window: `rank()` |Department Highest Salary|
 | 185 | window: `dense_rank()` |Department Top Three Salaries|
 | 511 | window: `dense_rank()`  |Game Play Analysis: find first_login date|
+| \608 | `IS NULL`, `NOT IN`  |GTree Node|
 | \1077 | Union() or CTE: `with recursive` |Project Employees III: find the most experiecned employees|
 | 1270 | window: `rank()`  |All People Report to the Given Manager|
 | 1285 | window: `row_number()`  |Find the Start and End Number of Continuous Ranges|
