@@ -1,0 +1,12 @@
+SELECT id
+     , CASE
+       WHEN p_id IS NULL THEN 'Root'
+       WHEN id NOT IN (SELECT p_id FROM Tree WHERE p_id IS NOT NULL) THEN 'Leaf' # IMPORTANT!!
+       ELSE 'Inner'
+       END AS type
+  FROM Tree
+  
+  ##PAY ATTENTION TO THE SUBQUERY
+  SELECT p_id FROM Tree (WHERE p_id IS NOT NULL)
+  # if omit the '(WHERE p_id IS NOT NULL)' part, the query will not return 'leaf' type
+  # Because there are null values in the table, SELECT 'p_id FROM Tree' will return ALL False
