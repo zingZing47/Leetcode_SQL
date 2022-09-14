@@ -8,6 +8,7 @@
 | 184 | window: `rank()` |Department Highest Salary|
 | 185 | window: `dense_rank()` |Department Top Three Salaries|
 | 511 | window: `dense_rank()`  |Game Play Analysis: find first_login date|
+| 550 | `AVG()`,`DATEDIFF()`,`MIN()`  |Game Play Analysis IV|
 | \608 | `IS NULL`, `NOT IN`  |GTree Node|
 | \1077 | Union() or CTE: `with recursive` |Project Employees III: find the most experiecned employees|
 | 1270 | window: `rank()`  |All People Report to the Given Manager|
@@ -25,7 +26,6 @@
 | 1949 | `Union` + `Join` |Strong Friendship|
 | 1951 | window: `rank()`  |All the Pairs With the Maximum Number of Common Followers|
 | 1972 | window: `dense_rank()`+ `Union` |First and Last Call On the Same Day|
-
 
 
 
@@ -57,6 +57,8 @@ cbrt() cubed root
 
 ## Date:
 date_sub('2022-8-20', INTERVAL 3 day), to create new date
+
+date_add'2022-8-20', INTERVAL 3 day), to create new date
 
 date_format(day,"%Y-%m-%d"), to extract only date from column 'day'
 
