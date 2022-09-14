@@ -1,0 +1,10 @@
+# Write your MySQL query statement below
+SELECT ROUND(AVG(a1.player_id IS NOT NULL),2) fraction
+  FROM Activity a1
+ RIGHT
+  JOIN (
+      SELECT player_id
+           , MIN(event_date) first_day
+        FROM Activity
+       GROUP BY 1
+   )a ON (a1.player_id = a.player_id AND DATEDIFF(a1.event_date,a.first_day)=1)
