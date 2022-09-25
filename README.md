@@ -9,7 +9,8 @@
 | 185 | window: `dense_rank()` |Department Top Three Salaries|
 | 511 | window: `dense_rank()`  |Game Play Analysis: find first_login date|
 | 550 | `AVG()`,`DATEDIFF()`,`MIN()`  |Game Play Analysis IV|
-| \608 | `IS NULL`, `NOT IN`  |GTree Node|
+| \608 | `MOD()`, `CASE WHEN`  |Exchange Seats|
+| 626 | `IS NULL`, `NOT IN`  |GTree Node|
 | \1077 | Union() or CTE: `with recursive` |Project Employees III: find the most experiecned employees|
 | 1270 | window: `rank()`  |All People Report to the Given Manager|
 | 1285 | window: `row_number()`  |Find the Start and End Number of Continuous Ranges|
@@ -26,7 +27,6 @@
 | 1949 | `Union` + `Join` |Strong Friendship|
 | 1951 | window: `rank()`  |All the Pairs With the Maximum Number of Common Followers|
 | 1972 | window: `dense_rank()`+ `Union` |First and Last Call On the Same Day|
-
 
 
 ## Aggregation Functions:
