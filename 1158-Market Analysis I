@@ -1,0 +1,20 @@
+# Write your MySQL query statement below
+SELECT user_id buyer_id
+     , join_date
+     , COUNT(DISTINCT order_id) orders_in_2019
+  FROM Orders o
+ RIGHT
+  JOIN Users u on (o.buyer_id = u.user_id AND date_format(o.order_date,"%Y") = 2019)
+ GROUP BY 1
+
+
+Wrong:
+SELECT user_id buyer_id
+     , join_date
+     , COUNT(DISTINCT order_id) orders_in_2019
+  FROM Orders o
+ RIGHT
+  JOIN Users u on (o.buyer_id = u.user_id)
+ GROUP BY 1
+ WHERE date_format(o.order_date,"%Y") = 2019
+ # orders_in_2019=0 orders will be deleted
