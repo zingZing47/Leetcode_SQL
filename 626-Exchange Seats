@@ -1,0 +1,13 @@
+# Write your MySQL query statement below
+WITH tmp AS(
+SELECT COUNT(*) cnt
+  FROM Seat
+)
+SELECT CASE
+       WHEN mod(id,2) = 1 AND id != cnt THEN id+1
+       WHEN mod(id,2) = 1 AND id  = cnt THEN id
+       ELSE id-1
+       END AS id
+     , student
+  FROM Seat, tmp
+ ORDER BY 1
