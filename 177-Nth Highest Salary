@@ -10,7 +10,7 @@ BEGIN
               END getNthHighestSalary
         FROM (
           SELECT salary
-               , DENSE_RANK() OVER(ORDER BY salary DESC) rnk
+               , DENSE_RANK() OVER(ORDER BY salary DESC) rnk 
             FROM Employee) a
        WHERE rnk = N
   );
