@@ -1,0 +1,14 @@
+# Write your MySQL query statement below
+with unbanned as(
+    SELECT users_id
+      FROM Users
+     WHERE banned != 'Yes'
+)
+SELECT request_at Day
+     , ROUND(SUM(IF(status='completed',0,1))/ COUNT(DISTINCT id),2) AS `Cancellation Rate`
+  FROM Trips t
+  WHERE client_id in(SELECT users_id FROM unbanned)
+    AND driver_id in(SELECT users_id FROM unbanned)
+    AND request_at BETWEEN "2013-10-01" AND "2013-10-03"
+  GROUP BY 1
+
