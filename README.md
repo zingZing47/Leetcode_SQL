@@ -7,6 +7,7 @@
 | 180 | NO LAG() LEAD()in mySQL |Consecutive Numbers|
 | 184 | window: `rank()` |Department Highest Salary|
 | 185 | window: `dense_rank()` |Department Top Three Salaries|
+| 262 | `BETWEEN()` |Trips and Users|
 | 511 | window: `dense_rank()`  |Game Play Analysis: find first_login date|
 | 550 | `AVG()`,`DATEDIFF()`,`MIN()`  |Game Play Analysis IV|
 | \608 | `MOD()`, `CASE WHEN`  |Exchange Seats|
@@ -29,6 +30,8 @@
 | 1951 | window: `rank()`  |All the Pairs With the Maximum Number of Common Followers|
 | 1972 | window: `dense_rank()`+ `Union` |First and Last Call On the Same Day|
 
+
+262. Trips and Users
 
 
 ## Aggregation Functions:
