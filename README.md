@@ -1,6 +1,6 @@
 # Leetcode_SQL 
 
-197. Rising Temperature
+
 | No.           | Relevant Functions |Description|
 | ------------- | -----------------| -------------|
 | 176 | window: `dense_rank()`  `ifnull()`|Second Highest Salary|
