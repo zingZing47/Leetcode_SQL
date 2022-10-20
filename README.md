@@ -1,6 +1,5 @@
 # Leetcode_SQL 
 
-181. Employees Earning More Than Their Managers
 
 | No.           | Relevant Functions |Description|
 | ------------- | -----------------| -------------|
@@ -8,6 +7,7 @@
 | \177 | window: `dense_rank()` or `ifnull()`+`limit()` |UDFUNCTION:Nth Highest Salary|
 | 180 | NO LAG() LEAD()in mySQL |Consecutive Numbers|
 | 181 | self join |Employees Earning More Than Their Managers|
+| 182 | Group by + having |Duplicate Emails|
 | 183 | left join |Customers Who Never Order|
 | 184 | window: `rank()` |Department Highest Salary|
 | 185 | window: `dense_rank()` |Department Top Three Salaries|
