@@ -1,6 +1,6 @@
 # Leetcode_SQL 
 
-
+197. Rising Temperature
 | No.           | Relevant Functions |Description|
 | ------------- | -----------------| -------------|
 | 176 | window: `dense_rank()`  `ifnull()`|Second Highest Salary|
@@ -11,6 +11,7 @@
 | 183 | left join |Customers Who Never Order|
 | 184 | window: `rank()` |Department Highest Salary|
 | 185 | window: `dense_rank()` |Department Top Three Salaries|
+| 197 | self join  |Rising Temperature|
 | 262 | `BETWEEN()` |Trips and Users|
 | 511 | window: `dense_rank()`  |Game Play Analysis: find first_login date|
 | 550 | `AVG()`,`DATEDIFF()`,`MIN()`  |Game Play Analysis IV|
