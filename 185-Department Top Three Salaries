@@ -3,7 +3,7 @@ WITH tmp AS(
     SELECT id
      , departmentId
      , DENSE_RANK() OVER(PARTITION BY departmentId ORDER BY salary DESC) rnk 
-  FROM Employee
+  FROM Employee 
 )
 SELECT d.name Department
      , e.name Employee
