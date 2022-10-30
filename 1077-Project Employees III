@@ -9,5 +9,5 @@ WITH a AS(
  
 SELECT project_id
      , employee_id
-  FROM a
+  FROM a 
  WHERE rnk = 1
