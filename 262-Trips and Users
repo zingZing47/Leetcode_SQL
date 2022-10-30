@@ -12,3 +12,4 @@ SELECT request_at Day
     AND request_at BETWEEN "2013-10-01" AND "2013-10-03"
   GROUP BY 1
 
+ 
