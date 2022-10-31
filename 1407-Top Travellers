@@ -1,6 +1,6 @@
 SELECT u.name
      , IFNULL(sum(distance), 0) travelled_distance
-  FROM Users u
+  FROM Users u 
   LEFT
   JOIN Rides r on (r.user_id = u.id)
  GROUP BY u.id # Don't group by name!
