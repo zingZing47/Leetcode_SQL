@@ -7,7 +7,7 @@ WITH a AS(
       JOIN Project using(employee_id)
 )
  
-SELECT project_id
+SELECT project_id 
      , employee_id
   FROM a 
  WHERE rnk = 1
